@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outer-container">
     <p>Loading the Prismic's Preview...</p>
   </div>
 </template>

@@ -15,7 +15,14 @@ export default {
 <style scoped>
 .footer {
   padding: 40px 0;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #9A9A9A;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-style: italic;
   text-align: center;
+  border-top: 1px solid #DADADA;
 }
 
 .logo {

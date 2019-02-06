@@ -1,6 +1,10 @@
-# Prismic Vue.js Starter
+# Prismic Vue.js Example Blog
 
-> [Vue.js](https://vuejs.org) starter project with content managed in [Prismic](https://prismic.io)
+> [Vue.js](https://vuejs.org) example blog project with content managed in [Prismic](https://prismic.io)
+
+# Learn more about using Prismic with Vue.js
+
+> [Prismic Vue.js Documentation](https://prismic.io/docs/vuejs/getting-started/with-the-vuejs-starter)
 
 ## How to launch this project in your local environment
 
@@ -12,14 +16,7 @@ npm run serve
 ```
 
 Then you can access it at [http://localhost:8080](http://localhost:8080).
-You'll find a tutorial that explains how to create your first Vue component filled with content retrieved from Prismic.
 
-## How to remove the tutorial from this project
-
-- Remove Tutorial import and route in src/router/index.js
-- Delete Tutorial component file `rm src/views/Tutorial.vue`
-- Delete Tutorial assets `rm -r src/assets/css/tutorial/ && rm -r src/assets/img/tutorial/`
-- Remove vue-highlightjs dependency `npm uninstall vue-highlightjs`
 
 ## Project setup
 ``` bash
