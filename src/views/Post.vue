@@ -24,10 +24,10 @@
         <!-- Image with caption slice template -->
         <template v-else-if="slice.slice_type === 'image_with_caption'">
           <image-caption-slice 
-          :img="slice.primary.image" 
-          :caption="slice.primary.caption" 
-          :class="slice.slice_label">
-          </image-caption-slice>
+          :img="slice.primary.image"
+          :size="slice.slice_label"
+          :caption="slice.primary.caption"
+          ></image-caption-slice>
         </template>
       </section>
   </div>

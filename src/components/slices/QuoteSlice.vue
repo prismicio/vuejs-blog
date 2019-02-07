@@ -1,8 +1,6 @@
 <template>
   <div class='post-part single container'>
-    <blockquote>
-      <prismic-rich-text :field="quote" class="block-quotation"/>
-    </blockquote>
+    <blockquote class="block-quotation">{{ $prismic.richTextAsPlain(quote) }}</blockquote>
   </div>
 </template>
 
