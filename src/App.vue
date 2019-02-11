@@ -19,6 +19,4 @@ export default {
 <style>
 @import "./assets/css/resetr.css";
 @import "./assets/css/common.css";
-@import "./assets/css/prismic-edit-button.css";
-@import "./assets/css/blog.css";
 </style>
