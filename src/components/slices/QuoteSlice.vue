@@ -7,7 +7,6 @@
 <script>
 export default {
   props: ['quote'],
-
   name: 'quote-slice'
 }
 </script>

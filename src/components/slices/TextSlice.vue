@@ -7,7 +7,6 @@
 <script>
 export default {
   props: ['text'],
-
   name: 'text-slice'
 }
 </script>
