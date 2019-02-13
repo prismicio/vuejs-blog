@@ -85,9 +85,6 @@ export default {
 .home {
   max-width: 700px;
   margin: auto;
-}
-/* Home header */
-.home {
   text-align: center;
 }
 .home .blog-avatar {
@@ -111,19 +108,6 @@ export default {
 @media (max-width: 767px) {
   .home {
     padding: 0 20px;
-  }
-  h1 {
-    font-size: 36px;
-    line-height: 45px;
-  }
-  h2 {
-    font-size: 28px
-  }
-  h3 {
-    font-size: 18px;
-  }
-  .blog-post-meta, .blog-post-meta {
-    font-size: 16px;
   }
 }
 </style>

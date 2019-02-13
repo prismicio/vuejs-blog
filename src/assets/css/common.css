@@ -54,11 +54,11 @@ h3 {
   font-size: 22px;
   font-weight: 900;
 }
-p {
+p, pre, ul, ol {
   margin-bottom: 2rem;
 }
-pre, ul {
-  margin-bottom: 20px;
+ul, ol {
+  padding-left: 40px;
 }
 strong {
   font-weight: bold;
@@ -70,11 +70,37 @@ em {
   max-width: 700px;
   margin: auto;
 }
+.outer-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+}
+.back {
+  color: #9A9A9A;
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 2em auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+.back:before {
+  content: '←';
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+}
+.back a {
+  color: #9A9A9A;
+}
+.back a:hover {
+  text-decoration: underline;
+}
 .wio-link {
   position: fixed;
   bottom: 30px;
   right: 30px;
-
+  z-index: 100;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -83,4 +109,29 @@ em {
   border-radius: 24px;
   background-color: #fafafa;
   box-shadow: 0 2px 7px 0 rgba(90, 90, 140, 0.40);
+}
+
+@media (max-width: 767px) {
+  .outer-container {
+    padding: 20px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .post-part pre {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 28px
+  }
+  h3 {
+    font-size: 18px;
+  }
 }

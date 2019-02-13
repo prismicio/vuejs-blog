@@ -8,26 +8,26 @@
       <prismic-edit-button :documentId="documentId"/>
 
       <h1 class="blog-title">{{ $prismic.richTextAsPlain(fields.title) }}</h1>
-      <p class="blog-post-meta"><span class="created-at">{{ fields.date }}</span></p>
+      <p class="blog-post-meta"><span class="created-at">{{ Intl.DateTimeFormat('en-US', dateOptions).format(new Date(fields.date)) }}</span></p>
 
     </div>
       <!-- Slice section template -->
       <section v-for="(slice, index) in slices" :key="'slice-' + index">
         <!-- Text slice template -->
         <template v-if="slice.slice_type === 'text'">
-          <text-slice :text="slice.primary.text"></text-slice>
+          <text-slice :text="slice.primary.text"/>
         </template>
         <!-- Quote slice template -->
         <template v-else-if="slice.slice_type === 'quote'">
-          <quote-slice :quote="slice.primary.quote"></quote-slice>
+          <quote-slice :quote="slice.primary.quote"/>
         </template>
         <!-- Image with caption slice template -->
         <template v-else-if="slice.slice_type === 'image_with_caption'">
           <image-caption-slice 
-          :img="slice.primary.image"
-          :size="slice.slice_label"
-          :caption="slice.primary.caption"
-          ></image-caption-slice>
+            :img="slice.primary.image"
+            :size="slice.slice_label"
+            :caption="slice.primary.caption"
+          />
         </template>
       </section>
   </div>
@@ -47,6 +47,7 @@ export default {
   },
   data () {
     return {
+      dateOptions: { year: 'numeric', month: 'short', day: '2-digit' },
       documentId: '',
       fields: {
         title: null,
@@ -85,49 +86,14 @@ export default {
 }
 </script>
 
-<style scoped>
-.outer-container {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 0;
-}
-/*
- * Blog posts
- */
-.back {
-  color: #9A9A9A;
-  display: block;
-  max-width: 700px;
-  margin: 0 auto 2em auto;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-}
-.back:before {
-  content: '←';
-  display: inline-block;
-  position: relative;
-  margin-right: 8px;
-}
-.back a {
-  color: #9A9A9A;
-}
-.back a:hover {
-  text-decoration: underline;
-}
-.post-part.single a, .blog-main.single a {
+<style>
+.post-part.single a {
   text-decoration: none;
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 75%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 75%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 23px;
-}
-.blog-post {
-  margin-bottom: 3rem;
-}
-.blog-post h2 {
-  margin: 0;
 }
 .blog-post-meta {
   color: #9A9A9A;
@@ -137,23 +103,10 @@ export default {
 
 /* Media Queries */
 @media (max-width: 767px) {
-  .outer-container {
-    padding: 20px;
-  }
   .post-part pre {
     font-size: 14px;
   }
-  h1 {
-    font-size: 36px;
-    line-height: 45px;
-  }
-  h2 {
-    font-size: 28px
-  }
-  h3 {
-    font-size: 18px;
-  }
-  .blog-post-meta, .blog-post-meta {
+  .blog-post-meta {
     font-size: 16px;
   }
 }
