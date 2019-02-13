@@ -2,9 +2,9 @@
 
 > [Vue.js](https://vuejs.org) example blog project with content managed in [Prismic](https://prismic.io)
 
-# Check out our article for a step by step guide to getting this project up and running
+## Check out our article for a step by step guide to getting this project up and running
 
-> [Prismic project guide](https://app.intercom.io/a/apps/bnnh3u9v/articles/articles/2694466/show)
+> [Prismic project guide](https://intercom.help/prismicio/examples/vue-js-samples/sample-blog-with-api-based-cms-in-vuejs)
 
 ## How to launch this project in your local environment
 
@@ -33,11 +33,7 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-``` bash
-npm run lint
-```
-# Learn more about using Prismic with Vue.js
+## Learn more about using Prismic with Vue.js
 
 > [Prismic Vue.js Documentation](https://prismic.io/docs/vuejs/getting-started/with-the-vuejs-starter)
 
