@@ -76,6 +76,7 @@ export default {
   },
   created () {
     this.getContent()
+    window.prismic.setupEditButton();
   }
 }
 </script>
