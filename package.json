@@ -7,7 +7,7 @@
   "author": "Prismic",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build && echo '/* /index.html 200' > dist/_redirects"
   },
   "dependencies": {
     "prismic-dom": "^2.1.0",
