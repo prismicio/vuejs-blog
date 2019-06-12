@@ -10,14 +10,15 @@
     "build": "vue-cli-service build && echo '/* /index.html 200' > dist/_redirects"
   },
   "dependencies": {
+    "fsevents": "^2.0.7",
     "prismic-dom": "^2.1.0",
     "prismic-vue": "^1.3.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
-    "@vue/cli-service": "^3.0.0-rc.5",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
     "vue-template-compiler": "^2.5.16"
   }
 }
