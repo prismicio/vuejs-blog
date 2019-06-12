@@ -26,8 +26,20 @@
 
 <script>
 export default {
-  props: ['img','caption','size'],
-  name: 'image-caption-slice'
+  props: ['slice'],
+  name: 'image-caption-slice',
+  data: function() {
+    return {
+      img: '',
+      caption: '',
+      size: '',
+    }
+  },
+  created () {
+    this.img = this.slice.primary.image
+    this.caption = this.slice.primary.caption
+    this.size = this.slice.slice_label
+  }
 }
 </script>
 
