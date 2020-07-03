@@ -10,8 +10,9 @@
     "build": "vue-cli-service build && echo '/* /index.html 200' > dist/_redirects"
   },
   "dependencies": {
+    "@prismicio/vue": "^2.0.7",
     "prismic-dom": "^2.1.0",
-    "prismic-vue": "^1.3.0",
+    "prismic-javascript": "git+https://git@github.com/prismicio/prismic-javascript.git#842e7983",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
