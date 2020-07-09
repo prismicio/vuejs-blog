@@ -12,7 +12,8 @@
   "dependencies": {
     "@prismicio/vue": "^2.0.7",
     "prismic-dom": "^2.1.0",
-    "prismic-javascript": "git+https://git@github.com/prismicio/prismic-javascript.git#842e7983",
+    "prismic-javascript": "^3.0.1",
+    "prismic-vue": "^2.0.1",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
