@@ -10,9 +10,9 @@ import Vue from 'vue'
 export default {
   name: 'Preview',
   beforeCreate () {
-    const previewToken = this.$route.query.token
+    const { token, documentId } = this.$route.query
 
-    this.$prismic.client.previewSession(previewToken, this.$prismic.linkResolver, '/')
+    this.$prismic.client.getPreviewResolver(token, documentId).resolve(this.$prismic.linkResolver, '/')
       .then((url) => {
         window.location.replace(url)
       })
