@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import PrismicVue from 'prismic-vue'
+import PrismicVue from '@prismicio/vue'
 import linkResolver from './prismic/link-resolver'
 import htmlSerializer from './prismic/html-serializer'
 import App from './App.vue'
