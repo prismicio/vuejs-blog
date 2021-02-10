@@ -24,6 +24,8 @@ npm run serve
 
 Then you can access it at [http://localhost:8080](http://localhost:8080).
 
+### Deploys made easy with Vercel
+[Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
 
 ## Learn more about using Prismic with Vue.js
 
