@@ -1,23 +1,25 @@
 {
-  "name": "prismic-vuejs-starter",
-  "version": "1.2.0",
-  "description": "Vue.js starter project with content managed in Prismic",
-  "license": "Apache-2.0",
-  "repository": "github:prismicio/vuejs-starter",
+  "name": "vuejs-blog",
+  "description": "Sample blog built with Vue.js using Prismic headless CMS",
   "author": "Prismic",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build && echo '/* /index.html 200' > dist/_redirects"
   },
   "dependencies": {
-    "prismic-dom": "^2.1.0",
-    "prismic-vue": "^1.3.0",
-    "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "@prismicio/client": "^4.0.0",
+    "@prismicio/vue": "^2.0.9",
+    "prismic-dom": "^2.2.5",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
-    "@vue/cli-service": "^3.0.0-rc.5",
-    "vue-template-compiler": "^2.5.16"
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prismicio/vuejs-blog"
   }
 }

@@ -11,39 +11,19 @@
       <p class="blog-post-meta"><span class="created-at">{{ Intl.DateTimeFormat('en-US', dateOptions).format(new Date(fields.date)) }}</span></p>
 
     </div>
-      <!-- Slice section template -->
-      <section v-for="(slice, index) in slices" :key="'slice-' + index">
-        <!-- Text slice template -->
-        <template v-if="slice.slice_type === 'text'">
-          <text-slice :text="slice.primary.text"/>
-        </template>
-        <!-- Quote slice template -->
-        <template v-else-if="slice.slice_type === 'quote'">
-          <quote-slice :quote="slice.primary.quote"/>
-        </template>
-        <!-- Image with caption slice template -->
-        <template v-else-if="slice.slice_type === 'image_with_caption'">
-          <image-caption-slice 
-            :img="slice.primary.image"
-            :size="slice.slice_label"
-            :caption="slice.primary.caption"
-          />
-        </template>
-      </section>
+    <!-- Slice Block Componenet tag -->
+    <slices-block :slices="slices"/>
   </div>
 </template>
 
 <script>
-import TextSlice from '../components/slices/TextSlice.vue'
-import QuoteSlice from '../components/slices/QuoteSlice.vue'
-import ImageCaptionSlice from '../components/slices/ImageCaptionSlice.vue'
+//Importing all the slices components
+import SlicesBlock from '../components/SlicesBlock.vue'
 
 export default {
   name: 'post',
   components: {
-    TextSlice,
-    QuoteSlice,
-    ImageCaptionSlice
+    SlicesBlock
   },
   data () {
     return {
